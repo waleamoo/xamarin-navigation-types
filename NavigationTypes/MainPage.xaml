@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage
+    xmlns:local="clr-namespace:NavigationTypes"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="NavigationTypes.MainPage">
+    <!--
+
+    Your pages are contained in the <ContentPage> tag, for simplictiy, we used on on label here. It could be <StackLayout>
+
+    <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="NavigationTypes.MainPage">
+
+    <ContentPage Title="Page1" IconImageSource="icons8-clock-24.png">
+        <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+
+    <ContentPage Title="Page2" IconImageSource="icons8-clock-24.png">
+        <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+</TabbedPage>
+
+
+    WE REFERENCE EXTERNAL PAGE BY USING THE LOCAL NAMESPACE AND CODE THE PAGE XML REFERENCE USING THE LOCAL KEYWORD
+
+    -->
+
+    <local:ContactPage Title="Contacts" IconImageSource="icons8-clock-24.png" />
+
+    <NavigationPage Title="Page1" IconImageSource="icons8-clock-24.png">
+        <x:Arguments>
+            <local:ContentPage1 />
+        </x:Arguments>
+    </NavigationPage>
+    
+
+    <ContentPage Title="Page2" IconImageSource="icons8-clock-24.png">
+        <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+</TabbedPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Contact Form"
+    xmlns:local="clr-namespace:NavigationTypes"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="NavigationTypes.TableViewPage">
+    <!--
+
+    Custom Cell - starts with <ViewCell>
+
+    -->
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Basics">
+                <TextCell Text="Name" Detail="Wale Amoo" />
+                <EntryCell Label="Title" Placeholder="(e.g. Shopping)" />
+                <SwitchCell Text="Notification" On="True" />
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 0">
+                        <Label Text="Starts" VerticalOptions="Center" />
+                        <DatePicker Date="1 Jan 2016" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13, 0">
+                        <Label Text="Ends" VerticalOptions="Center" />
+                        <DatePicker Date="1 Jan 2016" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+
+                <ViewCell Tapped="ViewCell_Tapped">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Contact Method" VerticalOptions="Center" />
+                        <Label x:Name="contactMethod"
+                               VerticalOptions="Center"
+                               HorizontalOptions="EndAndExpand"
+                               Text="None"
+                               TextColor="Gray" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+
+        </TableRoot>
+    </TableView>
+</ContentPage>
